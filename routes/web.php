@@ -24,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/play', function () {
+    // Your route logic goes here
+})->name('play');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
