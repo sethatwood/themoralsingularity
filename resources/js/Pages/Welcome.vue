@@ -58,6 +58,16 @@
                     collaboration, with scenarios dynamically generated using
                     OpenAI's GPT-3 API.
                 </p>
+
+                <h2 class="text-2xl font-bold mb-4">
+                    Get Certified in AI Ethics
+                </h2>
+                <p class="text-lg leading-7 mb-8">
+                    Once you complete all 12 scenarios, you'll receive a
+                    certificate of completion that you can share with your
+                    friends and colleagues to demonstrate your knowledge of AI
+                    ethics.
+                </p>
             </div>
 
             <div class="text-gray-500 text-center mt-16">
