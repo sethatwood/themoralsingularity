@@ -68,25 +68,19 @@
                     about the ethical implications of AI in our world.
                 </p>
             </div>
-
-            <div class="text-gray-500 text-center mt-16">
-                <a href="https://themoralsingularity.org"
-                    >TheMoralSingularity.org</a
-                >
-                |
-                <a href="mailto:hello@themoralsingularity.org">
-                    hello@themoralsingularity.org
-                </a>
-                <br />
-                Built by a human-AI collaboration with 💜
-            </div>
+            <Footer />
         </div>
     </div>
 </template>
 
 <script>
+import Footer from "@/Components/Footer.vue";
+
 export default {
     name: "Welcome",
+    components: {
+        Footer,
+    },
     mounted() {
         document.title = "Welcome | The Moral Singularity";
     },

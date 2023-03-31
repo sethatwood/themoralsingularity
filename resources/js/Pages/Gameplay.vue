@@ -70,31 +70,18 @@
                 </p>
             </div>
         </div>
-        <div class="text-gray-500 text-center mt-16">
-            Built by a human-AI collaboration with 💜
-            <br />
-            <a href="https://themoralsingularity.org"
-                >TheMoralSingularity.org</a
-            >
-            <span class="hidden md:inline"> • </span><br class="md:hidden" />
-            <a href="mailto:hello@themoralsingularity.org">
-                hello@themoralsingularity.org
-            </a>
-            <span class="hidden md:inline"> • </span><br class="md:hidden" />
-            <a
-                href="https://github.com/sethatwood/themoralsingularity"
-                target="_blank"
-            >
-                GitHub
-            </a>
-        </div>
+        <Footer />
     </div>
 </template>
 
 <script>
+import Footer from "@/Components/Footer.vue";
 import scenarios from "@/scenarios.js";
 
 export default {
+    components: {
+        Footer,
+    },
     data() {
         return {
             scenarios,
