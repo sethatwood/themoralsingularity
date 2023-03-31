@@ -72,8 +72,12 @@
             <div class="text-gray-500 text-center mt-16">
                 <a href="https://themoralsingularity.org"
                     >TheMoralSingularity.org</a
-                >
-                | Built by a human-AI collaboration with 💜
+                > | <a href="mailto:hello@themoralsingularity.org">
+                    hello@themoralsingularity.org
+                </a>
+                <br>
+                Built by a human-AI collaboration with 💜
+
             </div>
         </div>
     </div>
