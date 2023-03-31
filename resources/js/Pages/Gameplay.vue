@@ -127,9 +127,10 @@ export default {
             }, 0);
         },
         replayScenario() {
+            const scoreToSubtract = this.selectedOutcome.score;
             this.showOutcome = false;
             this.selectedOutcome = null;
-            this.totalScore -= this.selectedOutcome.score;
+            this.totalScore -= scoreToSubtract;
         },
     },
 };
