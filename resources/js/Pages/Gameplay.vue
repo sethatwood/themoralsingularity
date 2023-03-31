@@ -23,7 +23,9 @@
         </div>
 
         <div v-if="gameStarted">
-            <h1 class="text-2xl font-semibold mb-6">{{ scenario.title }}</h1>
+            <h1 class="text-2xl font-semibold mb-6">
+                {{ `${scenario.title}: ${scenario.id} of 12` }}
+            </h1>
             <p class="mb-4">{{ scenario.description }}</p>
             <p class="mb-6">{{ scenario.dilemma }}</p>
 
@@ -69,8 +71,22 @@
             </div>
         </div>
         <div class="text-gray-500 text-center mt-16">
-            <a href="/">TheMoralSingularity.org</a>
-            | Built by a human-AI collaboration with 💜
+            Built by a human-AI collaboration with 💜
+            <br />
+            <a href="https://themoralsingularity.org"
+                >TheMoralSingularity.org</a
+            >
+            <span class="hidden md:inline"> • </span><br class="md:hidden" />
+            <a href="mailto:hello@themoralsingularity.org">
+                hello@themoralsingularity.org
+            </a>
+            <span class="hidden md:inline"> • </span><br class="md:hidden" />
+            <a
+                href="https://github.com/sethatwood/themoralsingularity"
+                target="_blank"
+            >
+                GitHub
+            </a>
         </div>
     </div>
 </template>
@@ -84,6 +100,7 @@ export default {
             scenarios,
             scenarioIndex: 0,
             scenario: scenarios[0],
+            showIntro: false,
             showOutcome: false,
             selectedOutcome: null,
             totalScore: 0,

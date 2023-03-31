@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gradient-to-br from-gray-800 to-gray-900 text-white">
         <div class="container mx-auto px-4 py-12">
-            <img src="/images/ai.jpg" class="max-w-sm m-auto md:max-w-lg" />
+            <img src="/images/ai.jpg" class="max-w-xs m-auto md:max-w-lg" />
             <div class="text-center">
                 <h1 class="text-6xl font-bold leading-tight mb-4">
                     Welcome to The Moral Singularity
@@ -72,12 +72,13 @@
             <div class="text-gray-500 text-center mt-16">
                 <a href="https://themoralsingularity.org"
                     >TheMoralSingularity.org</a
-                > | <a href="mailto:hello@themoralsingularity.org">
+                >
+                |
+                <a href="mailto:hello@themoralsingularity.org">
                     hello@themoralsingularity.org
                 </a>
-                <br>
+                <br />
                 Built by a human-AI collaboration with 💜
-
             </div>
         </div>
     </div>
