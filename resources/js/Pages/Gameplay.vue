@@ -24,8 +24,12 @@
 
         <div v-if="gameStarted">
             <h1 class="text-2xl font-semibold mb-6">
-                {{ `${scenario.title}: ${scenario.id} of 12` }}
+                <span class="block text-xs uppercase">
+                    {{ scenario.id }} of 12
+                </span>
+                <span>{{ scenario.title }}</span>
             </h1>
+
             <p class="mb-4">{{ scenario.description }}</p>
             <p class="mb-6">{{ scenario.dilemma }}</p>
 
@@ -46,18 +50,28 @@
             </div>
 
             <div v-if="showOutcome">
-                <h2 class="text-xl font-semibold mb-4">Outcome:</h2>
-                <p class="mb-6">{{ selectedOutcome.description }}</p>
-                <p class="mb-4">Score: {{ selectedOutcome.score }}</p>
-
+                <h2 class="text-2xl font-semibold mb-4">Outcome:</h2>
+                <p class="text-lg mb-6">{{ selectedOutcome.description }}</p>
+                <p class="text-3xl font-bold mb-4">
+                    <span class="text-gray-500">Score: </span>
+                    <span
+                        :class="{
+                            'text-red-500': selectedOutcome.score === -1,
+                            'text-gray-500': selectedOutcome.score === 0,
+                            'text-green-500': selectedOutcome.score === 1,
+                        }"
+                    >
+                        {{ selectedOutcome.score }}
+                    </span>
+                </p>
                 <button
-                    class="bg-yellow-500 text-white px-4 py-2 rounded mb-6 mr-4"
+                    class="bg-yellow-500 text-white text-lg font-semibold px-4 py-2 rounded mb-6 mr-4"
                     @click="replayScenario"
                 >
                     Replay Scenario
                 </button>
                 <button
-                    class="bg-green-500 text-white px-4 py-2 rounded mb-6"
+                    class="bg-green-500 text-white text-lg font-semibold px-4 py-2 rounded mb-6"
                     @click="nextScenario"
                 >
                     Next Scenario
