@@ -25,10 +25,9 @@
                     challenge your thinking and help you explore the
                     complexities of ethical decision-making in a world
                     increasingly driven by artificial intelligence. The game
-                    features 12 core AI ethics dilemmas, each dynamically
-                    generated using OpenAI's GPT-3 API. As you play, you'll be
-                    faced with thought-provoking scenarios that will push you to
-                    consider the ethical implications of AI in various contexts.
+                    features 12 core AI ethics dilemmas, each crafted to provoke
+                    thought and engage players in various contexts related to AI
+                    ethics.
                 </p>
 
                 <h2 class="text-2xl font-bold mb-4">
@@ -54,19 +53,18 @@
                     ethics, philosophy, and game design. Our goal was to create
                     an engaging, thought-provoking experience that would help
                     people develop a deeper understanding of the ethical
-                    challenges posed by AI. The game is the result of a human-AI
-                    collaboration, with scenarios dynamically generated using
-                    OpenAI's GPT-3 API.
+                    challenges posed by AI.
                 </p>
 
                 <h2 class="text-2xl font-bold mb-4">
-                    Get Certified in AI Ethics
+                    A Deeper Dive into AI Ethics
                 </h2>
                 <p class="text-lg leading-7 mb-8">
-                    Once you complete all 12 scenarios, you'll receive a
-                    certificate of completion that you can share with your
-                    friends and colleagues to demonstrate your knowledge of AI
-                    ethics.
+                    As you complete all 12 scenarios, you'll gain valuable
+                    insights into the complexities of AI ethics. Share your
+                    experiences and newfound knowledge with friends and
+                    colleagues to stimulate discussions and raise awareness
+                    about the ethical implications of AI in our world.
                 </p>
             </div>
 
