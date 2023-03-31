@@ -8,12 +8,12 @@
                 <h2 class="text-3xl font-semibold mb-8">
                     Play the AI Ethics Game
                 </h2>
-                <inertia-link
+                <a
                     class="py-4 px-8 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition duration-300 cursor-pointer"
-                    :href="route('play')"
+                    href="/play"
                 >
                     Start Playing Now
-                </inertia-link>
+                </a>
             </div>
 
             <div class="mt-16">

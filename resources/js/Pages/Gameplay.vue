@@ -1,43 +1,80 @@
 <template>
-    <div>
-      <h1 class="text-3xl font-bold mb-8">The Moral Singularity</h1>
-      <div class="max-w-md mx-auto">
-        <div v-if="!gameStarted">
-          <button class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" @click="startGame">Start Game</button>
-        </div>
-        <div v-else>
-          <!-- TODO: Display the current scenario and handle user input -->
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-semibold mb-6">{{ scenario.title }}</h1>
+      <p class="mb-4">{{ scenario.description }}</p>
+      <p class="mb-6">{{ scenario.dilemma }}</p>
+
+      <div v-if="!showOutcome">
+        <h2 class="text-xl font-semibold mb-4">Options:</h2>
+        <div class="mb-4" v-for="option in scenario.options" :key="option.id">
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            @click="selectOption(option)"
+          >
+            {{ option.title }}
+          </button>
         </div>
       </div>
+
+      <div v-if="showOutcome">
+        <h2 class="text-xl font-semibold mb-4">Outcome:</h2>
+        <p>{{ selectedOutcome.description }}</p>
+        <p class="mb-4">Score: {{ selectedOutcome.score }}</p>
+
+        <button
+          class="bg-green-500 text-white px-4 py-2 rounded mb-6"
+          @click="nextScenario"
+        >
+          Next Scenario
+        </button>
+      </div>
     </div>
-</template>
+  </template>
 
-<script>
-export default {
-    name: 'Gameplay',
+  <script>
+  import scenarios from "@/scenarios.js";
 
+  export default {
     data() {
       return {
-        gameStarted: false,
-        currentScenarioIndex: 0,
-        currentScenario: null,
-        score: 0,
+        scenarios,
+        scenarioIndex: 0,
+        scenario: scenarios[0],
+        showOutcome: false,
+        selectedOutcome: null,
+        totalScore: 0,
       };
     },
-
     methods: {
-      async startGame() {
-        console.log('Starting game...')
-        // TODO: Load the first scenario and start the game
+      selectOption(option) {
+        this.selectedOutcome = option.outcome;
+        this.totalScore += option.outcome.score;
+        this.showOutcome = true;
       },
-
-      async submitResponse(response) {
-        // TODO: Handle the user's response to the current scenario
+      nextScenario() {
+        this.scenarioIndex++;
+        if (this.scenarioIndex < this.scenarios.length) {
+          this.scenario = this.scenarios[this.scenarioIndex];
+          this.showOutcome = false;
+        } else {
+          alert(`Game over! Your total score is: ${this.totalScore}`);
+          this.resetGame();
+        }
       },
-
-      async nextScenario() {
-        // TODO: Load the next scenario or end the game if there are no more scenarios
+      resetGame() {
+        this.scenarioIndex = 0;
+        this.scenario = this.scenarios[this.scenarioIndex];
+        this.showOutcome = false;
+        this.selectedOutcome = null;
+        this.totalScore = 0;
       },
     },
   };
-</script>
+  </script>
+
+  <style scoped>
+  .container {
+    max-width: 800px;
+    padding: 2rem;
+  }
+  </style>
