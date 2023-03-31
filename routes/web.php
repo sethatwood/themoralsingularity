@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/play', function () {
-    // Your route logic goes here
+    return Inertia::render('Gameplay');
 })->name('play');
 
 Route::middleware([
