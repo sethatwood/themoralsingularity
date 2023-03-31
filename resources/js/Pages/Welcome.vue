@@ -80,5 +80,8 @@
 <script>
 export default {
     name: "Welcome",
+    mounted() {
+        document.title = "Welcome | The Moral Singularity";
+    },
 };
 </script>

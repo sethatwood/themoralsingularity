@@ -49,6 +49,12 @@
                 <p class="mb-4">Score: {{ selectedOutcome.score }}</p>
 
                 <button
+                    class="bg-yellow-500 text-white px-4 py-2 rounded mb-6 mr-4"
+                    @click="replayScenario"
+                >
+                    Replay Scenario
+                </button>
+                <button
                     class="bg-green-500 text-white px-4 py-2 rounded mb-6"
                     @click="nextScenario"
                 >
@@ -80,6 +86,9 @@ export default {
             totalPossibleScore: 0,
             gameStarted: false,
         };
+    },
+    mounted() {
+        document.title = "Play | The Moral Singularity";
     },
     methods: {
         startGame() {
@@ -116,6 +125,11 @@ export default {
                 );
                 return sum + maxScore;
             }, 0);
+        },
+        replayScenario() {
+            this.showOutcome = false;
+            this.selectedOutcome = null;
+            this.totalScore -= this.selectedOutcome.score;
         },
     },
 };
