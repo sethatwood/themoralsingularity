@@ -68,6 +68,12 @@
                 </p>
             </div>
         </div>
+        <div class="text-gray-500 text-center mt-16">
+            <a href="/"
+                >TheMoralSingularity.org</a
+            >
+            | Built by a human-AI collaboration with 💜
+        </div>
     </div>
 </template>
 
