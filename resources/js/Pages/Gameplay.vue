@@ -29,17 +29,17 @@
 
             <div v-if="!showOutcome">
                 <h2 class="text-xl font-semibold mb-4">Options:</h2>
-                <div
-                    class="mb-4"
-                    v-for="option in scenario.options"
-                    :key="option.id"
-                >
-                    <button
-                        class="bg-blue-500 text-white px-4 py-2 rounded"
-                        @click="selectOption(option)"
-                    >
-                        {{ option.title }}
-                    </button>
+                <div v-if="!showIntro && !showOutcome" class="mb-6">
+                    <div class="text-center">
+                        <button
+                            v-for="option in scenario.options"
+                            :key="option.id"
+                            class="w-full mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            @click="selectOption(option)"
+                        >
+                            {{ option.title }}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -69,9 +69,7 @@
             </div>
         </div>
         <div class="text-gray-500 text-center mt-16">
-            <a href="/"
-                >TheMoralSingularity.org</a
-            >
+            <a href="/">TheMoralSingularity.org</a>
             | Built by a human-AI collaboration with 💜
         </div>
     </div>
