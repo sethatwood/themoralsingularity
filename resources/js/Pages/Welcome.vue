@@ -1,6 +1,7 @@
 <template>
     <div class="bg-gradient-to-br from-gray-800 to-gray-900 text-white">
         <div class="container mx-auto px-4 py-12">
+            <img src="/images/ai.jpg" class="max-w-sm m-auto md:max-w-lg" />
             <div class="text-center">
                 <h1 class="text-6xl font-bold leading-tight mb-4">
                     Welcome to The Moral Singularity
