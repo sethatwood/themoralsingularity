@@ -16,4 +16,8 @@ As you complete all 12 scenarios, you'll gain valuable insights into the complex
 
 ## Technology
 
-We instructed ChatGPT to use Laravel and Vue to drive the site.
+The Moral Singularity is a web application built using a unique collaborative approach between AI and human developers. ChatGPT, a large language model trained by OpenAI, played a critical role in generating the ethical scenarios, options, and outcomes that form the backbone of the game. Our development process involved extensive collaboration between human and AI developers, with the humans deferring to the AI for game architecture.
+
+The web application was built using [Inertia.js](https://inertiajs.com/), a framework that allows us to build single-page applications using server-side routing and controllers, paired with client-side rendering powered by Vue.js. Inertia.js is a great choice for building modern, reactive user interfaces, while still leveraging the power of a traditional server-side framework.
+
+ChatGPT has a deep understanding of Inertia.js, making it a perfect fit for our project. 😎
