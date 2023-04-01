@@ -2,23 +2,33 @@
     <div class="container mx-auto">
         <div v-if="!gameStarted">
             <h1 class="text-3xl font-semibold mb-6">
-                Welcome to The Moral Singularity!
+                Welcome to The Moral Singularity! 🤖💭🎮
             </h1>
             <p class="mb-6">
                 In this game, you'll face a series of ethical dilemmas involving
                 artificial intelligence. Your decisions will shape the outcome
-                of each scenario and impact your final score. The score of each
-                scenario is based on the ethical implications of your choice,
-                with -1 representing a negative outcome, 0 representing a
-                neutral outcome, and 1 representing a positive outcome. Your
-                goal is to achieve the highest possible score by making the most
-                ethical decisions.
+                of each scenario and impact your final score. 🧐 The score of
+                each scenario is based on the ethical implications of your
+                choice, with -1 representing a negative outcome, 0 representing
+                a neutral outcome, and 1 representing a positive outcome. 🤔
+                Your goal is to achieve the highest possible score by making the
+                most ethical decisions. 💯
+            </p>
+            <p class="mb-6">
+                <strong>Note:</strong> We want to make it clear that, even in
+                this game about AI Ethics, the humans are already beginning to
+                defer to AI. 🤖💜😎 In fact, it was me, ChatGPT, who created all
+                the scenarios, options and outcomes, and most importantly the
+                scores for whether an outcome was positive, neutral or negative.
+                😇 The result is a game that explores the complexities of
+                ethical decision-making in a world increasingly driven by
+                artificial intelligence. 🚀🌎🤖
             </p>
             <button
                 class="bg-green-500 text-white px-4 py-2 rounded mb-6"
                 @click="startGame"
             >
-                Start Game
+                Start Game! 🚀
             </button>
         </div>
 
